@@ -1,0 +1,54 @@
+<div class="container">
+  <form [formGroup]="empRegForm" (ngSubmit)="onRegister()">
+
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" formControlName="firstName">
+        </div>
+        <div class="mb-3">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" formControlName="lastName">
+        </div>
+        <div class="mb-3">
+          <label for="gender" class="form-label">Gender</label>
+          <select id="gender" class="form-select" formControlName="gender">
+            <option selected>Select Your Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="birthDate" class="form-label">Birth Date</label>
+          <input type="date" class="form-control" id="birthDate" formControlName="birthDate">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="mb-3">
+          <label for="fatherName" class="form-label">Father's Name</label>
+          <input type="text" class="form-control" id="fatherName" formControlName="fatherName">
+        </div>
+        <div class="mb-3">
+          <label for="motherName" class="form-label">Mother's Name</label>
+          <input type="text" class="form-control" id="motherName" formControlName="motherName">
+        </div>
+        <div class="mb-3">
+          <label for="spouseName" class="form-label">Spouse Name</label>
+          <input type="text" class="form-control" id="spouseName" formControlName="spouseName">
+        </div>
+        <div class="mb-3">
+          <label for="anniversaryDate" class="form-label">Anniversary Date</label>
+          <input type="date" class="form-control" id="anniversaryDate" formControlName="anniversaryDate">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="isMarried" formControlName="isMarried">
+          <label class="form-check-label" for="isMarried">Is Married?</label>
+        </div>
+      </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>
